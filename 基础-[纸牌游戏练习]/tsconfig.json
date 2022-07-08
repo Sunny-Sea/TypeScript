@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {  // 编译选项
+    "target": "ES2016",
+    "module": "CommonJS",
+    "lib": ["es2016"],
+    "outDir": "./dist",
+    "strictNullChecks": true,	// 在进行类型检查时，请考虑“null”和“undefined”。
+    "removeComments": true,  // 禁用发出注释。
+    "noImplicitUseStrict": true,  // 编译文件不开启严格模式
+    "esModuleInterop": true // 发出额外的JavaScript以简化对导入CommonJS模块的支持。这将启用“allowSyntheticDefaultImports”以实现类型兼容性。
+  },
+  "include": ["./src"]
+}

@@ -1,34 +1,7 @@
-type Deck = NormalCard[];
+import {Deck} from './type'
+import {Color, Mark} from './enum'
 
-enum Color {
-    heart = "♥",
-    spade = "♠",
-    club = "♣",
-    diamond = "♦"
-}
-
-enum Mark {
-    ace = "A",
-    two = "2",
-    three = "3",
-    four = "4",
-    five = "5",
-    six = "6",
-    seven = "7",
-    eight = "8",
-    nine = "9",
-    ten = "10",
-    joke = "J",
-    queen = "Q",
-    king = "K"
-}
-
-type NormalCard = {
-    color: Color,
-    mark: Mark
-}
-
-function createDeck(): Deck {
+export function createDeck(): Deck {
     const deck: Deck = [];
     const color = Object.values(Color);
     const mark = Object.values(Mark);
@@ -43,7 +16,7 @@ function createDeck(): Deck {
     return deck;
 }
 
-function printDeck(deck: Deck) {
+export function printDeck(deck: Deck) {
     let result = "\n";
     deck.forEach((card, index) => {
         let str = card.color + card.mark;
@@ -54,6 +27,3 @@ function printDeck(deck: Deck) {
     })
     console.log(result);
 }
-
-const deck = createDeck();
-printDeck(deck);
